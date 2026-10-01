@@ -11,6 +11,9 @@ importers:
       '@public-ui/components':
         specifier: ^4.4.0
         version: 4.4.0(adopted-style-sheets@1.1.9-rc.25)
+      '@public-ui/react-v19':
+        specifier: ^4.4.0
+        version: 4.4.0(@public-ui/components@4.4.0(adopted-style-sheets@1.1.9-rc.25))(react-dom@19.3.0(react@19.3.0))(react@19.3.0)
       '@public-ui/theme-default':
         specifier: ^4.4.0
         version: 4.4.0(@public-ui/components@4.4.0(adopted-style-sheets@1.1.9-rc.25))
@@ -234,6 +237,13 @@ packages:
     hasBin: true
     peerDependencies:
       adopted-style-sheets: 1.1.9-rc.25
+
+  '@public-ui/react-v19@4.4.0':
+    resolution: {integrity: sha512-xcJHtHv83J7kgPfNZ3HhE0xwaio4QQyNyon5vGTunvICPcGclokZKlYttQ69V44Lyny8zkSCow+C05KZPBBCjQ==}
+    peerDependencies:
+      '@public-ui/components': 4.4.0
+      react: 19.x
+      react-dom: 19.x
 
   '@public-ui/theme-default@4.4.0':
     resolution: {integrity: sha512-Y/EnhiIrErTob6+QCIQtlOFkID6OCoJ/i3ByJ7bofbE/Y2uF+bFbIhWNr6Us64jrH8/J4+cUoOxNjvucAZ6jRw==}
@@ -1249,6 +1259,12 @@ snapshots:
       rgba-convert: 0.3.0
       typed-bem: 1.0.2
       wcag-contrast: 3.0.0
+
+  '@public-ui/react-v19@4.4.0(@public-ui/components@4.4.0(adopted-style-sheets@1.1.9-rc.25))(react-dom@19.3.0(react@19.3.0))(react@19.3.0)':
+    dependencies:
+      '@public-ui/components': 4.4.0(adopted-style-sheets@1.1.9-rc.25)
+      react: 19.3.0
+      react-dom: 19.3.0(react@19.3.0)
 
   '@public-ui/theme-default@4.4.0(@public-ui/components@4.4.0(adopted-style-sheets@1.1.9-rc.25))':
     dependencies:

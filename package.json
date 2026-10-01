@@ -11,6 +11,7 @@
   },
   "dependencies": {
     "@public-ui/components": "^4.4.0",
+    "@public-ui/react-v19": "^4.4.0",
     "@public-ui/theme-default": "^4.4.0",
     "react": "^19.2.8",
     "react-dom": "^19.2.8"
