@@ -1,0 +1,119 @@
+{
+  "range": {
+    "from": 1767222000000,
+    "to": 1791126942148
+  },
+  "sessions": 3,
+  "subagents": 0,
+  "prompts": 4,
+  "steps": 314,
+  "tokens": {
+    "input": 873746,
+    "output": 44453,
+    "reasoning": 311026,
+    "cache": {
+      "read": 20942912,
+      "write": 0
+    }
+  },
+  "cost": 0,
+  "tools": {
+    "mode": "detail",
+    "totals": {
+      "calls": 454,
+      "succeeded": 445,
+      "failed": 9,
+      "unfinished": 0
+    },
+    "usage": [
+      {
+        "name": "shell",
+        "calls": 232,
+        "succeeded": 232,
+        "failed": 0,
+        "unfinished": 0,
+        "durationP50": 184.5
+      },
+      {
+        "name": "grep",
+        "calls": 95,
+        "succeeded": 89,
+        "failed": 6,
+        "unfinished": 0,
+        "durationP50": 146
+      },
+      {
+        "name": "read",
+        "calls": 78,
+        "succeeded": 77,
+        "failed": 1,
+        "unfinished": 0,
+        "durationP50": 15
+      },
+      {
+        "name": "execute",
+        "calls": 25,
+        "succeeded": 24,
+        "failed": 1,
+        "unfinished": 0,
+        "durationP50": 106
+      },
+      {
+        "name": "edit",
+        "calls": 10,
+        "succeeded": 10,
+        "failed": 0,
+        "unfinished": 0,
+        "durationP50": 14.5
+      },
+      {
+        "name": "glob",
+        "calls": 8,
+        "succeeded": 7,
+        "failed": 1,
+        "unfinished": 0,
+        "durationP50": 108.5
+      },
+      {
+        "name": "write",
+        "calls": 6,
+        "succeeded": 6,
+        "failed": 0,
+        "unfinished": 0,
+        "durationP50": 19
+      }
+    ]
+  },
+  "activeDays": 2,
+  "streak": 1,
+  "activity": [
+    {
+      "date": "2026-10-01",
+      "steps": 266
+    },
+    {
+      "date": "2026-10-04",
+      "steps": 48
+    }
+  ],
+  "models": [
+    {
+      "model": {
+        "id": "mimo-v2.6-flash-free",
+        "providerID": "opencode",
+        "variant": "default"
+      },
+      "steps": 314,
+      "tokens": {
+        "input": 873746,
+        "output": 44453,
+        "reasoning": 311026,
+        "cache": {
+          "read": 20942912,
+          "write": 0
+        }
+      },
+      "cost": 0
+    }
+  ]
+}
