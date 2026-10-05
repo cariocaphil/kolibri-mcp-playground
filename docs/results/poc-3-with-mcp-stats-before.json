@@ -1,0 +1,123 @@
+{
+  "range": {
+    "from": 1767222000000,
+    "to": 1791228316649
+  },
+  "sessions": 6,
+  "subagents": 0,
+  "prompts": 7,
+  "steps": 374,
+  "tokens": {
+    "input": 955290,
+    "output": 54140,
+    "reasoning": 327946,
+    "cache": {
+      "read": 22656576,
+      "write": 0
+    }
+  },
+  "cost": 0,
+  "tools": {
+    "mode": "detail",
+    "totals": {
+      "calls": 545,
+      "succeeded": 536,
+      "failed": 9,
+      "unfinished": 0
+    },
+    "usage": [
+      {
+        "name": "shell",
+        "calls": 306,
+        "succeeded": 306,
+        "failed": 0,
+        "unfinished": 0,
+        "durationP50": 180
+      },
+      {
+        "name": "grep",
+        "calls": 95,
+        "succeeded": 89,
+        "failed": 6,
+        "unfinished": 0,
+        "durationP50": 146
+      },
+      {
+        "name": "read",
+        "calls": 84,
+        "succeeded": 83,
+        "failed": 1,
+        "unfinished": 0,
+        "durationP50": 15
+      },
+      {
+        "name": "execute",
+        "calls": 30,
+        "succeeded": 29,
+        "failed": 1,
+        "unfinished": 0,
+        "durationP50": 133.5
+      },
+      {
+        "name": "edit",
+        "calls": 13,
+        "succeeded": 13,
+        "failed": 0,
+        "unfinished": 0,
+        "durationP50": 21
+      },
+      {
+        "name": "write",
+        "calls": 9,
+        "succeeded": 9,
+        "failed": 0,
+        "unfinished": 0,
+        "durationP50": 20
+      },
+      {
+        "name": "glob",
+        "calls": 8,
+        "succeeded": 7,
+        "failed": 1,
+        "unfinished": 0,
+        "durationP50": 108.5
+      }
+    ]
+  },
+  "activeDays": 3,
+  "streak": 2,
+  "activity": [
+    {
+      "date": "2026-10-01",
+      "steps": 266
+    },
+    {
+      "date": "2026-10-04",
+      "steps": 58
+    },
+    {
+      "date": "2026-10-05",
+      "steps": 50
+    }
+  ],
+  "models": [
+    {
+      "model": {
+        "id": "mimo-v2.6-flash-free",
+        "providerID": "opencode",
+        "variant": "default"
+      },
+      "steps": 374,
+      "tokens": {
+        "input": 955290,
+        "output": 54140,
+        "reasoning": 327946,
+        "cache": {
+          "read": 22656576,
+          "write": 0
+        }
+      },
+      "cost": 0
+    }
+  ]
+}
