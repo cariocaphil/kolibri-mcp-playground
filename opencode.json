@@ -1,0 +1,10 @@
+{
+  "mcp": {
+    "servers": {
+      "kolibri": {
+        "type": "remote",
+        "url": "https://public-ui-kolibri-mcp.vercel.app/mcp"
+      }
+    }
+  }
+}
