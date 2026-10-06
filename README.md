@@ -15,6 +15,9 @@ React + TypeScript + Vite playground used to evaluate whether the [official Koli
 | [`poc/kolibri-mcp-2`](https://github.com/cariocaphil/kolibri-mcp-playground/tree/poc/kolibri-mcp-2) | PoC 2 definition + comparison (basic form) |
 | [`test/kolibri-wihout-mcp-2`](https://github.com/cariocaphil/kolibri-mcp-playground/tree/test/kolibri-wihout-mcp-2) | PoC 2 — same prompt, no KoliBri MCP |
 | [`test/kolibri-with-mcp-2`](https://github.com/cariocaphil/kolibri-mcp-playground/tree/test/kolibri-with-mcp-2) | PoC 2 — same prompt, with KoliBri MCP (`opencode.json`) |
+| [`poc/kolibri-mcp-3`](https://github.com/cariocaphil/kolibri-mcp-playground/tree/poc/kolibri-mcp-3) | PoC 3 definition + comparison (form + word counter) |
+| [`test/kolibri-without-mcp-3`](https://github.com/cariocaphil/kolibri-mcp-playground/tree/test/kolibri-without-mcp-3) | PoC 3 — same prompt, no KoliBri MCP |
+| [`test/kolibri-with-mcp-3`](https://github.com/cariocaphil/kolibri-mcp-playground/tree/test/kolibri-with-mcp-3) | PoC 3 — same prompt, with KoliBri MCP (`opencode.json`) |
 
 Within each PoC, both test runs started from the same commit, prompt, model, OpenCode version, and dependency versions. The only intended difference was MCP access.
 
@@ -49,9 +52,26 @@ Session transcripts:
 
 **Outcome (one run, one task):** Both runs produced a correct, buildable form with the same core components (`KolForm`, `KolInputText`, `KolInputCheckbox`, `KolButton`). Here MCP **did** shorten discovery: roughly a fifth of the steps, tool calls, and reasoning tokens vs. reverse-engineering compiled source. Final correctness was comparable; the main observed benefit was efficiency when an official sample matched the task. Even with MCP, a quick local export-list check was still needed. Without MCP compensated with deeper runtime verification in headless Chrome.
 
-## Across both PoCs
+## PoC 3 — form + word counter
 
-Together, these runs suggest KoliBri MCP’s practical value is mainly **reducing investigation overhead for component discovery and composition when a matching official sample exists** — not necessarily producing a more correct final UI on these tasks. PoC 1 (larger login form with validation) did not show an efficiency win; PoC 2 (small, well-sampled form) did. Neither is a general verdict. See each evaluation for evidence and limitations.
+Extends PoC 2 with a text area and word counter, to test whether the MCP efficiency gain holds when the task needs more component-specific behavior (characters vs. words).
+
+Docs on `poc/kolibri-mcp-3`:
+
+- [PoC definition](https://github.com/cariocaphil/kolibri-mcp-playground/blob/poc/kolibri-mcp-3/docs/kolibri-mcp-poc-3.md)
+- [Comparison](https://github.com/cariocaphil/kolibri-mcp-playground/blob/poc/kolibri-mcp-3/docs/results/poc-3-comparison.md)
+- Prompts: [EN](https://github.com/cariocaphil/kolibri-mcp-playground/blob/poc/kolibri-mcp-3/docs/prompts/poc-3-en.md) · [DE](https://github.com/cariocaphil/kolibri-mcp-playground/blob/poc/kolibri-mcp-3/docs/prompts/poc-3-de.md)
+
+Session transcripts:
+
+- [Without MCP](https://github.com/cariocaphil/kolibri-mcp-playground/blob/test/kolibri-without-mcp-3/docs/results/poc-3-without-mcp-session.md)
+- [With MCP](https://github.com/cariocaphil/kolibri-mcp-playground/blob/test/kolibri-with-mcp-3/docs/results/poc-3-with-mcp-session.md)
+
+**Outcome (one run, one task):** Both runs produced a correct, buildable form with the same five components (`KolForm`, `KolInputText`, `KolInputCheckbox`, `KolTextarea`, `KolButton`) and a custom word counter (not `_hasCounter`, which counts characters). MCP still shortened discovery (~2–3× fewer tool calls/steps/tokens vs. without MCP), but the gain was smaller than in PoC 2. Local `.d.ts` inspection remained necessary for callback signatures; the word-vs-character distinction was not clearly sourced from MCP. Runtime verification again only happened without MCP.
+
+## Across all three PoCs
+
+Together, these runs suggest KoliBri MCP’s practical value is mainly **reducing investigation overhead for component discovery and composition when a matching official sample exists** — not necessarily producing a more correct final UI on these tasks. PoC 1 (larger login form with validation) did not show an efficiency win; PoC 2 (small, well-sampled form) showed a strong one; PoC 3 (form + word-counter semantics) showed a moderate one. None is a general verdict. See each evaluation for evidence and limitations.
 
 ## Run locally
 
